@@ -139,7 +139,6 @@ public final class PlotResults {
                 int px = x(p.n, minN, maxN, left, right);
                 int py = (int) (bottom - (Math.log10(p.value) - minY) / (maxY - minY) * (bottom - top));
                 if (lastX >= 0) g.drawLine(lastX, lastY, px, py);
-                // Hollow circles and small squares keep identical DP counts visible.
                 if (s.name.startsWith("two_rows")) g.fillRect(px - 3, py - 3, 6, 6);
                 else g.drawOval(px - 6, py - 6, 12, 12);
                 lastX = px;

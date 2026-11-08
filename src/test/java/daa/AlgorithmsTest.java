@@ -87,7 +87,6 @@ class AlgorithmsTest {
         for (int test = 0; test < 100; test++) {
             String text = randomString(random, random.nextInt(81));
             String pattern = randomString(random, 1 + random.nextInt(12));
-            // Include guaranteed hits as well as absent and overlong patterns.
             if (test % 3 == 0 && !text.isEmpty()) {
                 int start = random.nextInt(text.length());
                 pattern = text.substring(start, Math.min(text.length(), start + 5));

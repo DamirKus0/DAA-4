@@ -3,9 +3,6 @@ package daa;
 public final class TwoRowEditDistance implements EditDistance {
     private long operations;
 
-    // State: previous[j]=D(i-1,j), current[j]=D(i,j), with the shorter string in columns.
-    // Transition: min(previous[j]+1, current[j-1]+1, previous[j-1]+mismatch).
-    // Base: previous[j]=j for i=0; current[0]=i for each subsequent row.
     @Override
     public int distance(String a, String b) {
         operations = 0;

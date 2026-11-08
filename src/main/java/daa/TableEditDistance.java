@@ -3,9 +3,6 @@ package daa;
 public final class TableEditDistance implements EditDistance {
     private long operations;
 
-    // State: dp[i][j] is the distance between the first i and j characters.
-    // Transition: min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+mismatch).
-    // Base: dp[0][j]=j and dp[i][0]=i.
     @Override
     public int distance(String a, String b) {
         operations = 0;
